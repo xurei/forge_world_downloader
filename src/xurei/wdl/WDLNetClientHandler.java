@@ -1,4 +1,5 @@
 package xurei.wdl;
+
 import java.io.IOException;
 
 import xurei.util.Reflexion;
@@ -202,6 +203,34 @@ public class WDLNetClientHandler extends NetHandler//extends NetClientHandler
 	}
 //----------------------------------------------------------------------------------------------------------------------
 	
+	@Override
+	public void handleKickDisconnect(Packet255KickDisconnect par1Packet255KickDisconnect)
+	{
+    /* WDL >>> */
+    if(WDL.downloading)
+    {
+        WDL.stop();
+        try{Thread.sleep(2000);}catch(Exception e){}
+    }
+    /* <<< WDL */
+		nch.handleKickDisconnect(par1Packet255KickDisconnect);		
+	}
+//----------------------------------------------------------------------------------------------------------------------
+
+	public void handleErrorMessage(String par1Str, Object[] par2ArrayOfObj)
+	{
+    /* WDL >>> */
+    if(WDL.downloading)
+    {
+        WDL.stop();
+        try{Thread.sleep(2000);}catch(Exception e){}
+    }
+    /* <<< WDL */
+    
+		nch.handleErrorMessage(par1Str, par2ArrayOfObj);		
+	}
+//----------------------------------------------------------------------------------------------------------------------
+	
 	public void cleanup()
 	{
 		nch.cleanup();
@@ -308,15 +337,6 @@ public class WDLNetClientHandler extends NetHandler//extends NetClientHandler
 	public void handleBlockChange(Packet53BlockChange par1Packet53BlockChange)
 	{
 		nch.handleBlockChange(par1Packet53BlockChange);		
-	}
-	@Override
-	public void handleKickDisconnect(Packet255KickDisconnect par1Packet255KickDisconnect)
-	{
-		nch.handleKickDisconnect(par1Packet255KickDisconnect);		
-	}
-	public void handleErrorMessage(String par1Str, Object[] par2ArrayOfObj)
-	{
-		nch.handleErrorMessage(par1Str, par2ArrayOfObj);		
 	}
 	public void quitWithPacket(Packet par1Packet)
 	{
