@@ -10,6 +10,7 @@ THIS VERSION IS STILL IN BETA
 Installation
 ------------
 Like any other forge mod, place it in your mods folder and it's ready to go !
+
 This mod is only client side, so you don't need to alter your server's jar
 
 Usage
@@ -19,10 +20,12 @@ In the 'ESC' menu, click on "Download this world". Every loaded chunk will be sa
 Downloading Storage
 -------------------
 IMPORTANT : if you want to download the content of your chests (or any other storage, for FTB users), you MUST open them to see their content. The server will send you the content only if you ask for it. 
+
 Applied Energetics users : to download the content of your ME systems, open you ME drives block.
 
 
-Upcoming Features : 
+Upcoming Features
+-----------------
  - Multiworld support
  - Better tile entities support : The current version can override a previous save keeping unloaded chunks in their previous state (ie they are not erased if you went there before but not this time). However, overwritten chunks are entirely rewritten, and 
  - 1.6+ support (maybe)
