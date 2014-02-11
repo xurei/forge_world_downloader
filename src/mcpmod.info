@@ -1,0 +1,17 @@
+[
+{
+  "modid": "WorldDownloader",
+  "name": "World Downloader for Minecraft Forge",
+  "description": "Download you world from any server to Single Player",
+  "version": "0.1",
+  "mcversion": "1.5.2",
+  "logoFile": "/mcp.png",
+  "url": "http://www.xurei-design.be/world-downloader-for-minecraft-forge/",
+  "updateUrl": "",
+  "authors": ["dslake", "xurei", "cubic72", "Others"],
+  "credits": "",
+  "parent": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
