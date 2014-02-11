@@ -1,7 +1,7 @@
 Forge compatible World Downloader
 =================================
 
-Port of dslake's World Downloader (https://github.com/dslake/WorldDownloader). No vanilla class has been modified. Compatible with FTB unleashed.
+Port of dslake's World Downloader (https://github.com/dslake/WorldDownloader). No vanilla class are modified. Compatible with FTB unleashed.
 
 This version is for people playing on 1.5.2 servers using Forge. It has been tested and works on FTB Unleashed. Any other 1.5.2 FTB should be compatible too.
 
@@ -17,15 +17,19 @@ Usage
 -----
 In the 'ESC' menu, click on "Download this world". Every loaded chunk will be saved, and if you move, new chunk will be saved as well.
 
+To stop downloading, click on "Stop Download" in the 'ESC' menu.
+
 Downloading Storage
 -------------------
-IMPORTANT : if you want to download the content of your chests (or any other storage, for FTB users), you MUST open them to see their content. The server will send you the content only if you ask for it. 
+The server will not always send you the content of a chest or any other storage (for FTB users).
 
-Applied Energetics users : to download the content of your ME systems, open you ME drives block.
+To make sure that your storage content will be downloaded, just open your chests. The server will always send you the content in that case.
+
+Applied Energetics users : to download the content of your ME systems, open your ME drive blocks.
 
 
 Upcoming Features
 -----------------
  - Multiworld support
- - Better tile entities support : The current version can override a previous save keeping unloaded chunks in their previous state (ie they are not erased if you went there before but not this time). However, overwritten chunks are entirely rewritten, and 
+ - Better tile entities support 
  - 1.6+ support (maybe)
