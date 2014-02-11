@@ -1,4 +1,5 @@
 package xurei.wdl;
+
 import java.util.EnumSet;
 
 import net.minecraft.client.Minecraft;
@@ -35,6 +36,25 @@ public class WDLTickHandler implements ITickHandler
 																							// instead of GuiIngameCustom ;)
 			started = true;
 		}*/
+		
+		/*WDL>>>*/
+    if( WDL.guiToShowAsync != null )
+    {
+        mc.displayGuiScreen( WDL.guiToShowAsync );
+        WDL.guiToShowAsync = null;
+    }
+    if( WDL.downloading )
+    {
+        if( WDL.tp.openContainer != WDL.windowContainer )
+        {
+            if( WDL.tp.openContainer == WDL.tp.inventoryContainer )
+                WDL.onItemGuiClosed();
+            else
+                WDL.onItemGuiOpened();
+            WDL.windowContainer = WDL.tp.openContainer;
+        }
+    }
+    /*<<<WDL*/
 	}
 
 	public void tickEnd(EnumSet<TickType> type, Object... tickData)
