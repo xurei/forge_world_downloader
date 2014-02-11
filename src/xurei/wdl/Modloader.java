@@ -21,7 +21,7 @@ import cpw.mods.fml.common.network.Player;
 import cpw.mods.fml.common.registry.TickRegistry;
 import cpw.mods.fml.relauncher.Side;
 
-@Mod(modid="xurei.wdl", name="xurei World Download", version="0.0.1")
+@Mod(modid="WorldDownloader", name="World Download for Forge", version="0.1")
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
 public class Modloader 
 {
