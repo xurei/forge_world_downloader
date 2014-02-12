@@ -61,7 +61,7 @@ import net.minecraft.world.storage.ThreadedFileIOBase;
  */
 public class WDL
 {
-	public static boolean DEBUG = true; // Setting to false will supress debug output in chat console
+	public static boolean DEBUG = false; // Setting to false will supress debug output in chat console
 	// References:
 	public static Minecraft   mc; // Reference to the Minecraft object
 	public static net.minecraft.client.multiplayer.WorldClient wc; // Reference to the World object that WDL uses
@@ -331,7 +331,6 @@ public class WDL
 		// If the last thing clicked was an ENTITY
 		if(lastEntity != null)
 		{
-			
 			if(lastEntity instanceof EntityMinecart && windowContainer instanceof ContainerChest)
 			{
 				EntityMinecart emc = (EntityMinecart)lastEntity;
@@ -520,7 +519,7 @@ public class WDL
 	/** Checks if the TileEntity should be imported. Only "problematic" TEs will be imported. */
 	public static boolean isImportableTileEntity( TileEntity te )
 	{
-		Block block = Block.blocksList[ wc.getBlockId( te.xCoord, te.yCoord, te.zCoord ) ];
+		/*Block block = Block.blocksList[ wc.getBlockId( te.xCoord, te.yCoord, te.zCoord ) ];
 		if( block instanceof BlockChest && te instanceof TileEntityChest )
 			return true;
 		else if( block instanceof BlockDispenser && te instanceof TileEntityDispenser )
@@ -532,7 +531,8 @@ public class WDL
 		else if( block instanceof BlockBrewingStand && te instanceof TileEntityBrewingStand )
 			return true;
 		else
-			return false;
+			return false;*/
+		return true;
 	}
 	
 	/** Returns the TileEntity class name. */
